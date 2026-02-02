@@ -1,0 +1,30 @@
+info:
+  name: create destination
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{local-laravel}}/api/destinations"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Wisata Air Terjun Sedudo",
+        "location": "Kecamatan Sawahan Kabupaten Nganjuk",
+        "latitude": 7.7813,
+        "longitude": 111.7576,
+        "category": "Alam",
+        "average_rating": 5.0,
+        "image_url": "https://placehold.co/600x400",
+        "approx_price_range": "10.000 - 15.000",
+        "best_time_to_visit": "Pagi - siang",
+        "tag": "Wisata alam"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

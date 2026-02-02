@@ -1,0 +1,30 @@
+info:
+  name: update destination
+  type: http
+  seq: 3
+
+http:
+  method: PUT
+  url: "{{local-laravel}}/api/destinations/1"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Wisata Candi Lor",
+        "location": "Kecamatan Loceret Kabupaten Nganjuk",
+        "latitude": 7.6378,
+        "longitude": 111.8922,
+        "category": "Sejarah",
+        "average_rating": 4.5,
+        "image_url": "https://placehold.co/600x400",
+        "approx_price_range": "09.000 - 15.000",
+        "best_time_to_visit": "Pagi - Sore",
+        "tag": "Wisata Sejarah"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

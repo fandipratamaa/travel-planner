@@ -1,0 +1,22 @@
+info:
+  name: login user
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{local-laravel}}/api/users/login"
+  body:
+    type: json
+    data: |-
+      {
+        "email": "test@example.com",
+        "password": "test"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
